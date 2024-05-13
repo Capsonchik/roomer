@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import {Button, Container, Panel, Placeholder} from "rsuite";
+import {Button, Container, Panel} from "rsuite";
 import {useDispatch, useSelector} from "react-redux";
 import {AppDispatch} from "@/store/store";
 import {setIsNewUser} from "@/store/main/mainSlice";
