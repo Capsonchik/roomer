@@ -1,6 +1,5 @@
 import styles from './styles.module.css'
-import {Heading, Nav, Sidebar, Sidenav} from "rsuite";
-import DashboardIcon from '@rsuite/icons/legacy/Dashboard';
+import {Nav, Sidebar, Sidenav} from "rsuite";
 import GroupIcon from '@rsuite/icons/legacy/Group';
 import MagicIcon from '@rsuite/icons/legacy/Magic';
 import GearCircleIcon from '@rsuite/icons/legacy/GearCircle';

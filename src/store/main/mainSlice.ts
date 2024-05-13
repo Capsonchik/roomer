@@ -1,7 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {User, Users} from "@/types/User";
 import {fetchGetNewUsers} from "@/store/main/user.actions";
-import {tr} from "date-fns/locale";
 
 type InitialStateTypes = {
   currentComponent: string
