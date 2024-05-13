@@ -1,8 +1,7 @@
 import {Button, Table} from "rsuite";
 import {useSelector} from "react-redux";
 import {selectLoader, selectNewUsers, selectUsers} from "@/store/main/mainSlice.selectors";
-import {useState} from "react";
-import {User, Users} from "@/types/User";
+import {Users} from "@/types/User";
 const { Column, HeaderCell, Cell } = Table;
 
 export const TableComponent = () => {
@@ -47,7 +46,7 @@ export const TableComponent = () => {
 
         <Cell style={{ padding: '6px' }}>
           {rowData => (
-            <Button appearance="link" onClick={() => alert(`id:${rowData.id}`)}>
+            <Button appearance="link" onClick={() => console.log(rowData)}>
               Edit
             </Button>
           )}

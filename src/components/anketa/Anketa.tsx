@@ -19,7 +19,6 @@ export const Anketa = () => {
           <Button>Параметры</Button>
         </div>
       </Panel>
-      {/*<NewUserModal/>*/}
       <TableComponent/>
     </Container>
   );
