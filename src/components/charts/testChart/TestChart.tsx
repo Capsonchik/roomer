@@ -19,9 +19,11 @@ export const TestChart = () => {
 
 
   return (
-    <ReactECharts
-      option={options}
-      style={{width: '100%', height: '100%'}}
-    />
+
+      <ReactECharts
+        option={options}
+        style={{width: '100%', height: '100%'}}
+      />
+
   );
 };

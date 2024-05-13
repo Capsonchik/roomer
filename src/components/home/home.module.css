@@ -4,7 +4,13 @@
     margin-bottom: 16px;
 }
 
+.test {
+    width: calc(100vw - 290px);
+}
+
+
 .statBlocks {
+    /*width: calc(100vw - 270px);*/
     margin-top: 16px;
     display: flex;
     justify-content: space-between;
@@ -25,6 +31,7 @@
 }
 
 .chartsBlock {
+    width: 100%;
     margin-top: 16px;
     display: flex;
     justify-content: space-between;

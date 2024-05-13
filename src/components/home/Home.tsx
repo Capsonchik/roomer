@@ -12,7 +12,7 @@ export const Home = () => {
 
 
   return (
-    <Container>
+    <div className={styles.test}>
       <div className={styles.statBlocks}>
         <div className={styles.statBlock}>
           {!loader ? `Всего пользователей: ${users && users.length}` : <Loader/>}
@@ -33,6 +33,6 @@ export const Home = () => {
           <PieChart/>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };

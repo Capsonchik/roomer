@@ -8,6 +8,7 @@ import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
 import {useEffect} from "react";
 import {fetchGetNewUsers} from "@/store/main/user.actions";
+import {AddUserCanvas} from "@/components/canvas/addUserCanva/AddUserCanvas";
 
 
 
@@ -30,6 +31,7 @@ export default function Home() {
         </Content>
       </Container>
       <Footer>Footer</Footer>
+      <AddUserCanvas/>
     </Container>
   );
 }
