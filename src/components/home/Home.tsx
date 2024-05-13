@@ -1,5 +1,5 @@
 import styles from './home.module.css';
-import {Container, Heading, Loader} from "rsuite";
+import {Container, Loader} from "rsuite";
 import {useSelector} from "react-redux";
 import {selectLoader, selectNewUsers} from "@/store/main/mainSlice.selectors";
 import {TestChart} from "@/components/charts/testChart/TestChart";

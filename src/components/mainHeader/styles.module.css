@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userBlock {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 25px;
+    cursor: pointer;
+}
