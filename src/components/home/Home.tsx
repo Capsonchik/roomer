@@ -14,7 +14,7 @@ export const Home = () => {
       <Heading level={4}>Главный блок</Heading>
       <div className={styles.statBlocks}>
         <div className={styles.statBlock}>
-          {!loader ? `Всего пользователей: ${users.length}` : <Loader/>}
+          {!loader ? `Всего пользователей: ${users && users.length}` : <Loader/>}
         </div>
         <div className={styles.statBlock}>
           Статистика

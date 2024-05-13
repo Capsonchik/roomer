@@ -6,16 +6,14 @@ import {tr} from "date-fns/locale";
 type InitialStateTypes = {
   currentComponent: string
   isAddNewUser: boolean
-  users: Users
   currentUser: User | null,
-  newUsers: [],
+  newUsers: Users | null,
   loading: boolean
 }
 
 const initialState: InitialStateTypes = {
   currentComponent: 'home',
   isAddNewUser: false,
-  users: [],
   currentUser: null,
   newUsers: [],
   loading: false
@@ -31,9 +29,6 @@ export const mainSlice = createSlice({
     setIsNewUser: (state, action) => {
       state.isAddNewUser = action.payload
     },
-    setUsers: (state, action) => {
-      state.users.push(action.payload)
-    }
   },
   extraReducers: builder => {
     builder
@@ -50,7 +45,6 @@ export const mainSlice = createSlice({
 export const {
   setCurrentComponent,
   setIsNewUser,
-  setUsers
 } = mainSlice.actions
 
 export default mainSlice.reducer;
