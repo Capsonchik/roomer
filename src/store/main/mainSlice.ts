@@ -1,18 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {User, Users} from "@/types/User";
+import {fetchGetNewUsers} from "@/store/main/user.actions";
+import {tr} from "date-fns/locale";
 
 type InitialStateTypes = {
   currentComponent: string
   isAddNewUser: boolean
   users: Users
-  currentUser: User | null
+  currentUser: User | null,
+  newUsers: [],
+  loading: boolean
 }
 
 const initialState: InitialStateTypes = {
   currentComponent: 'anketa',
   isAddNewUser: false,
   users: [],
-  currentUser: null
+  currentUser: null,
+  newUsers: [],
+  loading: false
 }
 
 export const mainSlice = createSlice({
@@ -28,6 +34,16 @@ export const mainSlice = createSlice({
     setUsers: (state, action) => {
       state.users.push(action.payload)
     }
+  },
+  extraReducers: builder => {
+    builder
+      .addCase(fetchGetNewUsers.fulfilled, (state, action) => {
+        state.newUsers = action.payload
+        state.loading = false
+      })
+      .addCase(fetchGetNewUsers.pending, (state) => {
+        state.loading = true
+      })
   }
 })
 

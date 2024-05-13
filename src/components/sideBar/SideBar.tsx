@@ -18,17 +18,17 @@ export const SideBar = () => {
       <Sidenav defaultOpenKeys={['3', '4']}>
         <Sidenav.Body>
           <Nav>
-            <Nav.Menu placement="rightStart" eventKey="1" title={'О проекте'} icon={<DashboardIcon />}>
-              <Nav.Item eventKey="1-1">Здравствуйте</Nav.Item>
-              <Nav.Item eventKey="1-2">Как зарегистрироваться?</Nav.Item>
-              <Nav.Item eventKey="1-3">Как участвовать?</Nav.Item>
-              <Nav.Item eventKey="1-4">О компании</Nav.Item>
-              <Nav.Item eventKey="1-5">Контакты</Nav.Item>
-            </Nav.Menu>
+            {/*<Nav.Menu placement="rightStart" eventKey="1" title={'О проекте'} icon={<DashboardIcon />}>*/}
+            {/*  <Nav.Item eventKey="1-1">Здравствуйте</Nav.Item>*/}
+            {/*  <Nav.Item eventKey="1-2">Как зарегистрироваться?</Nav.Item>*/}
+            {/*  <Nav.Item eventKey="1-3">Как участвовать?</Nav.Item>*/}
+            {/*  <Nav.Item eventKey="1-4">О компании</Nav.Item>*/}
+            {/*  <Nav.Item eventKey="1-5">Контакты</Nav.Item>*/}
+            {/*</Nav.Menu>*/}
             <Nav.Menu placement={'rightStart'} title={'Личный кабинет'} eventKey="2" icon={<GroupIcon />}>
-              <Nav.Item eventKey="2-1">Профиль</Nav.Item>
-              <Nav.Item eventKey="2-2">Семья</Nav.Item>
-              <Nav.Item onClick={() => dispatch(setCurrentComponent('anketa'))} eventKey="2-3">Анкеты</Nav.Item>
+              <Nav.Item onClick={() => dispatch(setCurrentComponent('anketa'))} eventKey="2-1">Таблица</Nav.Item>
+              <Nav.Item onClick={() => dispatch(setCurrentComponent('echarts'))} eventKey="2-2">График</Nav.Item>
+              <Nav.Item eventKey="2-3">Анкеты</Nav.Item>
               <Nav.Item eventKey="2-4">Домашние животные</Nav.Item>
             </Nav.Menu>
             <Nav.Menu placement="rightStart" eventKey="3" title="Участие в проекте" icon={<MagicIcon />}>
