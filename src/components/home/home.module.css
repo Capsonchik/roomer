@@ -1,0 +1,58 @@
+.header {
+    text-align: center;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.statBlocks {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+}
+
+.statBlock {
+    width: 33%;
+    height: 70px;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.chartsBlock {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.charts {
+    width: 70%;
+    height: 500px;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.users {
+    width: 28%;
+    height: 500px;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.usersBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.userItem {
+    margin-bottom: 8px;
+    color: black;
+    font-size: 16px;
+}

@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux";
 import {selectCurrentComponent} from "@/store/main/mainSlice.selectors";
 import {Anketa} from "@/components/anketa/Anketa";
+import {Home} from "@/components/home/Home";
 
 export const RenderContent = () => {
   const currentComponent = useSelector(selectCurrentComponent)
@@ -9,8 +10,8 @@ export const RenderContent = () => {
     switch (currentComponent) {
       case 'anketa':
         return <Anketa/>;
-      case '':
-        return '<Frame2/>';
+      case 'home':
+        return <Home/>;
 
       default:
         return 'Выберите шаблон';

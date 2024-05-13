@@ -13,7 +13,7 @@ type InitialStateTypes = {
 }
 
 const initialState: InitialStateTypes = {
-  currentComponent: 'anketa',
+  currentComponent: 'home',
   isAddNewUser: false,
   users: [],
   currentUser: null,
