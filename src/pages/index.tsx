@@ -8,6 +8,7 @@ import {AppDispatch} from "@/store/store";
 import {useEffect} from "react";
 import {fetchGetNewUsers} from "@/store/main/user.actions";
 import {AddUserCanvas} from "@/components/canvas/addUserCanva/AddUserCanvas";
+import {EditUserCanvas} from "@/components/canvas/editUserCanva/EditUserCanvas";
 
 
 
@@ -31,6 +32,7 @@ export default function Home() {
       </Container>
       <Footer>Footer</Footer>
       <AddUserCanvas/>
+      <EditUserCanvas/>
     </Container>
   );
 }

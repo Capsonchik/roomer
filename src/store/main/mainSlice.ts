@@ -3,16 +3,18 @@ import {User, Users} from "@/types/User";
 import {fetchGetNewUsers} from "@/store/main/user.actions";
 
 type InitialStateTypes = {
-  currentComponent: string
-  isAddNewUser: boolean
+  currentComponent: string,
+  isAddNewUser: boolean,
+  isEditOpen: boolean,
   currentUser: User | null,
   newUsers: Users | null,
-  loading: boolean
+  loading: boolean,
 }
 
 const initialState: InitialStateTypes = {
   currentComponent: 'home',
   isAddNewUser: false,
+  isEditOpen: false,
   currentUser: null,
   newUsers: [],
   loading: false
@@ -28,6 +30,12 @@ export const mainSlice = createSlice({
     setIsNewUser: (state, action) => {
       state.isAddNewUser = action.payload
     },
+    setIsEditUser: (state, action) => {
+      state.isEditOpen = action.payload
+    },
+    setCurrentUser: (state, action) => {
+      state.currentUser = action.payload
+    }
   },
   extraReducers: builder => {
     builder
@@ -44,6 +52,8 @@ export const mainSlice = createSlice({
 export const {
   setCurrentComponent,
   setIsNewUser,
+  setIsEditUser,
+  setCurrentUser
 } = mainSlice.actions
 
 export default mainSlice.reducer;

@@ -1,14 +1,22 @@
 import {Button, Table} from "rsuite";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {selectLoader, selectNewUsers} from "@/store/main/mainSlice.selectors";
+import {AppDispatch} from "@/store/store";
+import {setCurrentUser, setIsEditUser} from "@/store/main/mainSlice";
 const { Column, HeaderCell, Cell } = Table;
 
 export const TableComponent = () => {
   const newUsers = useSelector(selectNewUsers)
   const loader = useSelector(selectLoader)
+  const dispatch = useDispatch<AppDispatch>()
   const customLocale = {
     emptyMessage: 'Данных еще нет',
   };
+
+  const handleOpenEditUser = (rowData : any) => {
+    dispatch(setCurrentUser(rowData))
+    dispatch(setIsEditUser(true))
+  }
 
   return (
     <Table
@@ -44,7 +52,7 @@ export const TableComponent = () => {
 
         <Cell style={{ padding: '6px' }}>
           {rowData => (
-            <Button appearance="link" onClick={() => console.log(rowData)}>
+            <Button appearance="link" onClick={() => handleOpenEditUser(rowData)}>
               Edit
             </Button>
           )}

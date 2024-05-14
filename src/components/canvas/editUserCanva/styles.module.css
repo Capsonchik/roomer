@@ -1,0 +1,12 @@
+.names {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canva {
+    width: 500px !important;
+}
+
+.canvaBody {
+    padding: 10px;
+}
