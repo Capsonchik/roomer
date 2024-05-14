@@ -1,0 +1,30 @@
+.panelBlock {
+    display: flex;
+    gap: 30px;
+
+}
+
+.panel {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.calendarTodoList {
+    text-align: left;
+    padding: 0;
+    list-style: none;
+}
+
+.calendarTodoList li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.calendar-todo-item-badge {
+    vertical-align: top;
+    margin-top: 8px;
+    width: 6px;
+    height: 6px;
+}
