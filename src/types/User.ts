@@ -7,7 +7,6 @@ export type User = {
   phone?: string
   website?: string
   company?: UserCompany
-
 }
 
 export type UserAddress = {

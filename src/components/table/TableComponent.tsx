@@ -16,7 +16,7 @@ export const TableComponent = () => {
     <Table
       locale={customLocale}
       height={700}
-      data={newUsers}
+      data={newUsers ? newUsers : []}
       loading={loader}
       onRowClick={rowData => {
         console.log(rowData);
