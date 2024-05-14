@@ -1,4 +1,11 @@
 .panelBlock {
     display: flex;
     gap: 30px;
+
+}
+
+.panel {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 16px;
 }

@@ -23,11 +23,11 @@ export const AddUserCanvas = () => {
   }
 
   return (
-    <Drawer backdrop open={isOpen} onClose={() => dispatch(setIsNewUser(false))}>
+    <Drawer className={styles.canva} backdrop open={isOpen} onClose={() => dispatch(setIsNewUser(false))}>
       <Drawer.Header>
         <Drawer.Title>Добавление нового пользователя</Drawer.Title>
       </Drawer.Header>
-      <Drawer.Body>
+      <Drawer.Body className={styles.canvaBody}>
         <Form fluid onChange={(formValue: Partial<User>) => setFormValue(formValue as User)} formValue={formValue}>
           <Form.Group controlId="name-9">
             <Form.ControlLabel>Имя и фамилия</Form.ControlLabel>

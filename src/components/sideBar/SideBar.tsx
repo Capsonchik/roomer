@@ -27,7 +27,7 @@ export const SideBar = () => {
             <Nav.Menu placement={'rightStart'} title={'Личный кабинет'} eventKey="2" icon={<GroupIcon />}>
               <Nav.Item onClick={() => dispatch(setCurrentComponent('home'))} eventKey="2-1">Главная</Nav.Item>
               <Nav.Item onClick={() => dispatch(setCurrentComponent('anketa'))} eventKey="2-2">Таблица</Nav.Item>
-              <Nav.Item onClick={() => dispatch(setCurrentComponent('echarts'))} eventKey="2-3">График</Nav.Item>
+              <Nav.Item onClick={() => dispatch(setCurrentComponent('calendar'))} eventKey="2-3">Календарь</Nav.Item>
               <Nav.Item eventKey="2-4">Анкеты</Nav.Item>
               <Nav.Item eventKey="2-5">Домашние животные</Nav.Item>
             </Nav.Menu>

@@ -1,8 +1,9 @@
 import styles from './styles.module.css';
-import {Avatar, Header, Heading} from "rsuite";
+import {Avatar, Header} from "rsuite";
 import NoticeIcon from '@rsuite/icons/Notice';
 import CalendarIcon from '@rsuite/icons/Calendar';
 import BarChartIcon from '@rsuite/icons/BarChart';
+import {BarLogo} from "@/components/icons/BarLogo";
 
 
 export const MainHeader = () => {
@@ -10,7 +11,7 @@ export const MainHeader = () => {
 
   return (
     <Header className={styles.header}>
-      <Heading level={2}>Logo</Heading>
+      <BarLogo width={'40'} height={'40'} color={'black'}/>
       <div className={styles.userBlock}>
         <div className={styles.icons}>
           <BarChartIcon className={styles.icon}/>
