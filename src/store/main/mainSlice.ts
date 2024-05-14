@@ -6,6 +6,7 @@ type InitialStateTypes = {
   currentComponent: string,
   isAddNewUser: boolean,
   isEditOpen: boolean,
+  isAddNewEvent: boolean,
   currentUser: User | null,
   newUsers: Users | null,
   loading: boolean,
@@ -15,6 +16,7 @@ const initialState: InitialStateTypes = {
   currentComponent: 'home',
   isAddNewUser: false,
   isEditOpen: false,
+  isAddNewEvent: false,
   currentUser: null,
   newUsers: [],
   loading: false
@@ -32,6 +34,9 @@ export const mainSlice = createSlice({
     },
     setIsEditUser: (state, action) => {
       state.isEditOpen = action.payload
+    },
+    setIsAddNewEvent: (state, action) => {
+      state.isAddNewEvent = action.payload
     },
     setCurrentUser: (state, action) => {
       state.currentUser = action.payload
@@ -53,7 +58,8 @@ export const {
   setCurrentComponent,
   setIsNewUser,
   setIsEditUser,
-  setCurrentUser
+  setCurrentUser,
+  setIsAddNewEvent
 } = mainSlice.actions
 
 export default mainSlice.reducer;

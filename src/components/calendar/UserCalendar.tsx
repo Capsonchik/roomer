@@ -1,9 +1,10 @@
 import styles from './styles.module.css'
 import {Badge, Button, Calendar, Container, CustomProvider, Panel, Popover, Whisper} from "rsuite";
-import {setIsNewUser} from "@/store/main/mainSlice";
+import {setIsAddNewEvent} from "@/store/main/mainSlice";
 import {useDispatch} from "react-redux";
 import {AppDispatch} from "@/store/store";
 import {ruRU} from "rsuite/locales";
+import {AddCalendarEventCanvas} from "@/components/canvas/addNewCalendarIvent/AddCalendarEventCanvas";
 
 
 
@@ -78,12 +79,13 @@ export const UserCalendar = () => {
     <Container>
       <Panel header="Календарь" className={styles.panel}>
         <div className={styles.panelBlock}>
-          <Button onClick={() => dispatch(setIsNewUser(true))}>Запланировать событие</Button>
+          <Button onClick={() => dispatch(setIsAddNewEvent(true))}>Запланировать событие</Button>
         </div>
       </Panel>
       <CustomProvider locale={ruRU}>
         <Calendar bordered renderCell={renderCell}/>
       </CustomProvider>
+      <AddCalendarEventCanvas/>
     </Container>
   );
 };

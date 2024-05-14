@@ -6,3 +6,4 @@ export const selectNewUsers = (state: RootState) => state.main.newUsers
 export const selectLoader = (state: RootState) => state.main.loading
 export const selectIsEditOpen = (state: RootState) => state.main.isEditOpen
 export const selectCurrentUser = (state: RootState) => state.main.currentUser
+export const selectIsAddNewEvent = (state: RootState) => state.main.isAddNewEvent

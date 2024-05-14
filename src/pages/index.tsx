@@ -1,4 +1,4 @@
-import {Container,Footer, Content} from "rsuite";
+import {Container, Footer, Content, CustomProvider} from "rsuite";
 import 'rsuite/dist/rsuite.min.css';
 import {MainHeader} from "@/components/mainHeader/MainHeader";
 import {SideBar} from "@/components/sideBar/SideBar";
@@ -9,6 +9,7 @@ import {useEffect} from "react";
 import {fetchGetNewUsers} from "@/store/main/user.actions";
 import {AddUserCanvas} from "@/components/canvas/addUserCanva/AddUserCanvas";
 import {EditUserCanvas} from "@/components/canvas/editUserCanva/EditUserCanvas";
+import {ruRU} from "rsuite/locales";
 
 
 
@@ -22,17 +23,20 @@ export default function Home() {
 
 
   return (
-    <Container>
-      <MainHeader/>
+    <CustomProvider locale={ruRU}>
       <Container>
-        <SideBar/>
-        <Content style={{padding: "0 10px 10px 10px"}}>
-          <RenderContent/>
-        </Content>
+        <MainHeader/>
+        <Container>
+          <SideBar/>
+          <Content style={{padding: "0 10px 10px 10px"}}>
+            <RenderContent/>
+          </Content>
+        </Container>
+        <Footer>Footer</Footer>
+        <AddUserCanvas/>
+        <EditUserCanvas/>
       </Container>
-      <Footer>Footer</Footer>
-      <AddUserCanvas/>
-      <EditUserCanvas/>
-    </Container>
+    </CustomProvider>
+
   );
 }

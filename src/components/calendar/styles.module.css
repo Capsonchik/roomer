@@ -28,3 +28,10 @@
     width: 6px;
     height: 6px;
 }
+
+.addMoreAction {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
