@@ -1,11 +1,9 @@
 import {Button, Table} from "rsuite";
 import {useSelector} from "react-redux";
-import {selectLoader, selectNewUsers, selectUsers} from "@/store/main/mainSlice.selectors";
-import {Users} from "@/types/User";
+import {selectLoader, selectNewUsers} from "@/store/main/mainSlice.selectors";
 const { Column, HeaderCell, Cell } = Table;
 
 export const TableComponent = () => {
-  const users: Users = useSelector(selectUsers)
   const newUsers = useSelector(selectNewUsers)
   const loader = useSelector(selectLoader)
   const customLocale = {
